@@ -1,0 +1,38 @@
+# exclude everything
+/*
+\.DS*
+# folders
+!.scripts/
+!.matplotlib/
+.matplotlib/*
+!.matplotlib/stylelib/
+!.matplotlib/matplotlibrc
+!.content/
+!.config/
+!.copyfiles
+.config/*
+!.config/inkscape
+!.config/flake8
+!.config/ranger
+!.config/fish
+!.jupyter/
+!.local
+.local/*
+!.local/bin
+!.iterm2/
+!.ncmpcpp
+
+# files
+\#*
+!.gitignore
+!.profile
+!.bashrc
+!.bash_profile
+!.ispell_english
+!.latexmkrc
+!README.md
+!.offlineimaprc
+!.msmtprc
+!.Xmodmap
+!.xinitrc
+!.Xdefaults

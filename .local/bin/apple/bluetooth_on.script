@@ -1,0 +1,27 @@
+activate application "SystemUIServer"
+tell application "System Events"
+  tell process "SystemUIServer"
+    -- Click on menu bar 
+    set btMenu to (menu bar item 1 of menu bar 1 where description is "bluetooth")
+    tell btMenu
+      click
+      -- click on Bluetooth On
+      if exists menu item "Turn Bluetooth On" of menu 1
+      	 click menu item "Turn Bluetooth On" of menu 1
+      end if
+      delay 1
+      -- Connect to powerbeats
+      click btMenu
+      tell (menu item "Ilya Antonov’s Powerbeats³" of menu 1)
+        click
+        if exists menu item "Connect" of menu 1
+          click menu item "Connect" of menu 1
+          return "Connecting..."
+        else
+          click btMenu
+          return "Connect menu was not found, are you already connected?"
+        end if
+      end tell
+    end tell
+  end tell
+end tell

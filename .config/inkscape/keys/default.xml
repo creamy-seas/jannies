@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<keys
+   name="My custom shortcuts">
+  <bind
+     key="q"
+     modifiers="Ctrl"
+     action="FileClose"
+     display="true" />
+  <bind
+     key="Q"
+     modifiers="Ctrl"
+     action="FileClose" />
+  <bind
+     key="space"
+     action="FileTemplates"
+     display="true" />
+  <bind
+     key="w"
+     action="ToolCalligraphic"
+     display="true" />
+  <bind
+     key="W"
+     action="ToolCalligraphic" />
+  <bind
+     key="b"
+     action="ToolPen"
+     display="true" />
+  <bind
+     key="B"
+     action="ToolPen" />
+  <bind
+     key="v"
+     action="ToolSelector"
+     display="true" />
+  <bind
+     key="V"
+     action="ToolSelector" />
+  <bind
+     key="c"
+     action="DialogFillStroke"
+     display="true" />
+  <bind
+     key="C"
+     action="DialogFillStroke" />
+  <bind
+     key="x"
+     action="ToggleSnapGlobal"
+     display="true" />
+  <bind
+     key="X"
+     action="ToggleSnapGlobal" />
+  <bind
+     key="z"
+     action="EditUndo"
+     display="true" />
+  <bind
+     key="Z"
+     action="EditUndo" />
+  <bind
+     key="d"
+     action="EditDelete"
+     display="true" />
+  <bind
+     key="D"
+     action="EditDelete" />
+  <bind
+     key="o"
+     action="ToolArc"
+     display="true" />
+  <bind
+     key="O"
+     action="ToolArc" />
+  <bind
+     key="g"
+     action="SelectionGroup"
+     display="true" />
+  <bind
+     key="G"
+     action="SelectionGroup" />
+  <bind
+     key="g"
+     modifiers="Shift"
+     action="SelectionUnGroup"
+     display="true" />
+  <bind
+     key="G"
+     modifiers="Shift"
+     action="SelectionUnGroup" />
+  <bind
+     key="e"
+     action="ToolNode"
+     display="true" />
+  <bind
+     key="E"
+     action="ToolNode" />
+  <bind
+     key="e"
+     modifiers="Shift"
+     action="NodePrefs"
+     display="true" />
+  <bind
+     key="E"
+     modifiers="Shift"
+     action="NodePrefs" />
+  <bind
+     key="r"
+     modifiers="Shift"
+     action="FitCanvasToSelectionOrDrawing"
+     display="true" />
+  <bind
+     key="R"
+     modifiers="Shift"
+     action="FitCanvasToSelectionOrDrawing" />
+</keys>

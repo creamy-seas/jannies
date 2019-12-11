@@ -1,0 +1,30 @@
+#!/bin/bash
+
+DIRECTORY_TO_GENERATE_FOR=$1
+LINK_DIRECTORY="$1_hardlinked"
+
+echo "⦿ Hard linking folder \"$1\" to $LINKDIRECTORY [y/N]"
+read input
+if [[ "$input" == 'y' ]]; then
+
+    # 1 - make a symlink directory in this folder and clean it
+    mkdir -p $LINK_DIRECTORY && cd $LINK_DIRECTORY && rm -r * 2> /dev/null
+
+    # 2 - list all files and directories as lines (-iF) with "/" added to directories (-F)
+    # → grep out any lines without "/" on the end, that signify a folder (inverse with -v)
+    # → cut the first line and last 3 lines of file
+    tree -ifF "../$DIRECTORY_TO_GENERATE_FOR" | grep -v '/$' | tail -n +2 | tail -r | tail -n +3 > temp.txt
+
+    # 2 - generate hardlinks to all the files in the specified directory
+    while read LINE;
+    do
+	echo %LINE
+	ln -v $LINE .
+    done < temp.txt
+
+    # 3 - remove the temp file
+    rm temp.txt
+else
+    echo "⦿ Cancelling"
+fi
+
