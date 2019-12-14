@@ -12,6 +12,10 @@
 !.copyfiles
 .config/*
 !.config/inkscape
+!.config/htop
+!.config/sxiv
+!.config/tremc
+!.config/youtube-dl
 !.config/flake8
 !.config/ranger
 !.config/fish

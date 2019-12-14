@@ -3,7 +3,7 @@ set mouse_enabled true
 ########################################
 # 1 - hide files
 ########################################
-set hidden_filter ^\.|auto$|ltximg|_output|\.(?:pyc|vrb|pyo|lof|bak|swp|aux|log|nav|out|snm|toc|bcf|run\.xml|synctex\.gz|blg|bbl|fls|fdb_latexmk)$|^lost\+found$|^__(py)?cache__|README.md|Downloads|Documents|Music|Pictures$
+set hidden_filter ^\.|auto$|ltximg|_output|\.(?:pyc|vrb|pyo|lof|bak|swp|aux|log|nav|out|snm|toc|bcf|run\.xml|synctex\.gz|blg|bbl|fls|fdb_latexmk)$|^lost\+found$|^__(py)?cache__|README.md|Downloads|Documents|Music|Icon.*|Pictures$
 set show_hidden false
 
 ########################################
@@ -68,7 +68,7 @@ set display_tags_in_all_columns true
 # Version control
 ########################################
 # Be aware of version control systems and display information.
-set vcs_aware false
+set vcs_aware false 
 # State of the four backends git, hg, bzr, svn. The possible states are
 # disabled, local (only show local info), enabled (show local and remote
 # information).
@@ -84,7 +84,7 @@ set preview_images true
 #   Preview images in full color with the external command "w3mimgpreview"?
 #   This requires the console web browser "w3m" and a supported terminal.
 #   It has been successfully tested with "xterm" and "urxvt" without tmux.
-# set preview_images_method w3m
+#set preview_images_method w3m
 set preview_images_method iterm2
 set iterm2_font_width 8
 set iterm2_font_height 11
@@ -110,7 +110,7 @@ set max_console_history_size 100
 
 # Avoid previewing files larger than this size, in bytes.  Use a value of 0 to
 # disable this feature. 
-set preview_max_size 700000
+set preview_max_size 100000
 
 # Try to keep so much space between the top/bottom border when scrolling:
 set scroll_offset 8
@@ -251,6 +251,7 @@ map Mt linemode metatitle
 # My directoires
 ########################################
 #gnuclownworld
+map gyo cd /Users/CCCP/gdrive/organizing
 map gyb cd /Users/CCCP/gdrive/bureucracy
 map gyf cd /Users/CCCP/gdrive/adv16_sa_onFire
 map gyt cd /Users/CCCP/creamy_seas/2am/adv15_training
@@ -325,4 +326,4 @@ map <C-x> compress
 map ee shell inkscape_export.sh %f
 
 map ytv console shell youtube-dl -f 136+140%space
-map yta console shell youtube-dl  -x -f bestaudio --embed-thumbnail --add-metadata%space
+map yta console shell youtube-dl -f bestaudio --embed-thumbnail --add-metadata -x --audio-format m4a%space
