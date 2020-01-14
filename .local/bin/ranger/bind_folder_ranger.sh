@@ -5,6 +5,8 @@
 RCFILE="/Users/CCCP/.config/ranger/rc.conf" # ranger config file
 REGEXP="^map $1 cd .*\$" # regular expression of the form "map gaf cd /Users/ext/dfsda"
 REPLACE="map $1 cd $(pwd)"
+NEW_DIR=$(pwd)
+echo $NEW_DIR 
 
 # 1 - SEARCH for REGEXP
 SEARCH=$(cat "$RCFILE" | grep "$REGEXP")
@@ -12,7 +14,7 @@ SEARCH=$(cat "$RCFILE" | grep "$REGEXP")
 if [ -z "$SEARCH" ]; then
     # 2 - if SEARCH is empty, add a new line after gnuclownworld
     sed -i.bak '/gnuclownworld/a\
-    	map '$1' cd '$(pwd)'\
+    	map '$1' cd $NEW_DIR\
 	' "$RCFILE"
     
     echo "Wrote:\

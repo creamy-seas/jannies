@@ -34,4 +34,6 @@ read confirm
     
 if [ "$confirm" = "y" ];then
     echo -e $REFFERENCE >> ~/creamy_seas/monday_starts_on_saturday/bibliography.bib && echo "⦿ Copied!"
+elif [ "$confirm" = "N" ]; then
+    echo $REFFERENCE 
 fi

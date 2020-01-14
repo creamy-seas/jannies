@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # 0 - go to record folder
-folder="/Users/CCCP/gdrive/organizing/ilya_screencap"
+folder="/Users/CCCP/mydrive/video_log/example_screencaps"
+#folder="/Users/CCCP/gdrive/organizing/ilya_screencap"
 cd "$folder"
 
 # 1 - read in -a (audio) tag

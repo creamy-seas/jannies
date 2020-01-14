@@ -20,7 +20,7 @@ export HOME=/Users/CCCP
 export VIRTUALFISH_HOME=$HOME/creamy_seas/syncFiles/python_vi
 export PATH="$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":"):$PATH"
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 #  ____               _   
 # |  _ \  _   _  ___ | |_ 
 # | |_) || | | |/ __|| __|

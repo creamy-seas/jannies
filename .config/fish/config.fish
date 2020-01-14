@@ -1,5 +1,5 @@
 bass source ~/.profile
-
+transmission-daemon
 # __  __     _     ____   ____   _____  _____  _____  ___  _   _   ____ 
 #|  \/  |   / \   / ___| / ___| | ____||_   _||_   _||_ _|| \ | | / ___|
 #| |\/| |  / _ \ | |     \___ \ |  _|    | |    | |   | | |  \| || |  _ 
@@ -10,6 +10,8 @@ bass source ~/.profile
 eval (python3 -m virtualfish)
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 set VIRTUALFISH_HOME /Users/CCCP/creamy_seas/sync_files/python_vi
+
+abbr ranger "ranger --choosedir=$HOME/.rangerdir; cd (cat $HOME/.rangerdir)"
 
 #                      _           _           
 # _   _   ___   _   _ | |_  _   _ | |__    ___ 
@@ -101,4 +103,4 @@ source "/usr/local/Caskroom/miniconda/base/etc/fish/conf.d/conda.fish"
 # !! Contents within this block are managed by 'conda init' !!
 eval (eval /usr/local/Caskroom/miniconda/base/bin/conda "shell.fish" "hook" $argv)
 # <<< conda initialize <<<
-
+set -g fish_user_paths "/usr/local/opt/mysql-client/bin" $fish_user_paths
