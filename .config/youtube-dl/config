@@ -1,2 +1,2 @@
--o %(title)s.%(ext)s
+-o (%(upload_date)s)_%(title)s.%(ext)s
 -f bestvideo[ext=mp4][height<1200]+bestaudio[ext=m4a]/bestvideo[ext=webm][height<1200]+bestaudio[ext=webm]/bestvideo[height<1200]+bestaudio/best[height<1200]/best

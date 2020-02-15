@@ -1,0 +1,1 @@
+0 * * * * source $HOME/.cronfile && $CRON_FOLDER/luke_smith.sh >> /Users/CCCP/cron_log &2>1

@@ -11,11 +11,11 @@ do
 	"n") mv "$file" /Users/CCCP/creamy_seas/photo_db_temp/Winter\ 2018-2019;;
 	"k") mv "$file" /Users/CCCP/creamy_seas/photo_db_temp/kong;;
         "C-b")
-                cp "$file" ~/Dropbox ;;
+             cp "$file" ~/Dropbox ;;
         "C-r")
-                convert -rotate 90 "$file" "$file" ;;
+             convert -rotate 90 "$file" "$file" ;;
         "C-y")
-		clipboard.oa "$(pwd)/$file";;
+	     xclip -selection clipboard "$file" -t image/png;;
         "C-w")
                 nitrogen --save --set-zoom-fill "$file" ;;
         esac

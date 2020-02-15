@@ -11,14 +11,13 @@
 ## ncmpcpp.
 ##
 #
-ncmpcpp_directory = ~/creamy_seas/music_db/.metadata/ncmpcpp
 #
 ##
 ## Directory for storing downloaded lyrics. It defaults to ~/.lyrics since other
 ## MPD clients (eg. ncmpc) also use that location.
 ##
 #
-lyrics_directory = ~/creamy_seas/music_db/.metadata/lyrics
+lyrics_directory = ~/creamy_seas/db_music/.metadata/lyrics
 #
 ##### connection settings #####
 #
@@ -30,7 +29,7 @@ lyrics_directory = ~/creamy_seas/music_db/.metadata/lyrics
 #
 ## Needed for tag editor and file operations to work.
 ##
-mpd_music_dir = "~/creamy_seas/music_db"
+mpd_music_dir = "~/creamy_seas/db_music"
 # mpd_music_dir = "~/Music"
 #
 #mpd_crossfade_time = 5
