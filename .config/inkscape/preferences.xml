@@ -328,7 +328,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="px"
+       unit="mm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -340,8 +340,8 @@
        selcue="1"
        align_mode="0">
       <group
-         id="lineheight"
-         display_unit="2" />
+         display_unit="2"
+         id="lineheight" />
     </eventcontext>
     <eventcontext
        id="nodes"
@@ -359,8 +359,8 @@
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="346.613"
-       y="781.688"
+       x="0"
+       y="0"
        edit_clipping_paths="1"
        edit_masks="1" />
     <eventcontext
@@ -430,12 +430,12 @@
        offset="0"
        offsetunits="pt" />
     <group
-       id="measure"
-       fontsize="10"
-       precision="2"
-       scale="100"
+       unit="mm"
        offset="5"
-       unit="px" />
+       scale="100"
+       precision="2"
+       fontsize="10"
+       id="measure" />
   </group>
   <group
      id="palette">
@@ -579,7 +579,7 @@
        panel_mode="1"
        panel_wrap="0"
        panel_border="0"
-       page="2"
+       page="0"
        x="0"
        y="0"
        w="340"
@@ -717,14 +717,14 @@
        placement="5">
       <group
          id="exportarea"
-         value="selection" />
+         value="drawing" />
       <group
          id="defaultxdpi"
          value="300.01" />
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.svg.inkscape"
+       default="org.inkscape.output.pdf.cairorenderer"
        append_extension="1"
        enable_preview="1"
        path="/Users/CCCP/creamy_seas/monday_starts_on_saturday/dipole/paper/images_inkscape"
@@ -742,7 +742,7 @@
     <group
        id="import"
        enable_preview="1"
-       path="/Users/CCCP/creamy_seas/monday_starts_on_saturday/dipole/paper/images_inkscape/latexit/"
+       path="/Users/CCCP/Dropbox/"
        ask="0"
        link="embed"
        scale="optimizeQuality"
@@ -841,36 +841,36 @@
        on-blur="0.50"
        animate-time="100" />
     <group
-       id="glyphs"
-       panel_size="1"
-       panel_ratio="100"
-       panel_mode="1"
-       panel_wrap="0"
-       panel_border="0"
-       x="0"
-       y="0"
-       w="361"
-       h="311"
+       placement="1"
+       state="2"
        visible="0"
-       state="2"
-       placement="1" />
-    <group
-       placement="5"
-       state="2"
-       visible="1"
-       h="263"
-       w="336"
+       h="311"
+       w="361"
        y="0"
        x="0"
        panel_border="0"
        panel_wrap="0"
        panel_mode="1"
-       panel_size="1"
        panel_ratio="100"
-       id="objectattr">
+       panel_size="1"
+       id="glyphs" />
+    <group
+       id="objectattr"
+       panel_ratio="100"
+       panel_size="1"
+       panel_mode="1"
+       panel_wrap="0"
+       panel_border="0"
+       x="0"
+       y="0"
+       w="336"
+       h="263"
+       visible="1"
+       state="2"
+       placement="5">
       <group
-         panel_size="0"
-         id="" />
+         id=""
+         panel_size="0" />
     </group>
   </group>
   <group
@@ -1198,7 +1198,7 @@
        y="0"
        fullscreen="0"
        id="geometry"
-       maximized="0" />
+       maximized="1" />
     <group
        id="XYfront" />
     <group

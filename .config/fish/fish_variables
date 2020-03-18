@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
+SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_br:bind_folder_ranger\x2esh
 SETUVAR _fish_abbr_cv__word:convert_word_to_pdf\x2esh
 SETUVAR _fish_abbr_gbib:get_bibliography\x2esh
@@ -9,6 +10,7 @@ SETUVAR _fish_abbr_go:gource_record\x2esh
 SETUVAR _fish_abbr_google__remove:find\x20\x2e\x20\x2dname\x20Icon\x2a\x20\x2dtype\x20f\x20\x2ddelete
 SETUVAR _fish_abbr_gpgr:echo\x20RELOADAGENT\x20\x7c\x20gpg\x2dconnect\x2dagent
 SETUVAR _fish_abbr_gpuextreme:ssh\x20antonov\x40134\x2e219\x2e128\x2e96\x20\x2dp\x2022
+SETUVAR _fish_abbr_jq:jq\x20\x2e\x20/tmp/log
 SETUVAR _fish_abbr_macmini:ssh\x20ilyaantonov\x40196\x2e167\x2e0\x2e14\x20\x2dp\x2022
 SETUVAR _fish_abbr_mush:stream_concat\x2esh
 SETUVAR _fish_abbr_mw:move_window\x2esh
@@ -29,7 +31,9 @@ SETUVAR _fish_abbr_xc:xcowsay
 SETUVAR _fish_abbr_yg:cd\x20\x7e/creamy_seas\x20\x26\x26\x20ls\x20\x2ddl\x20\x2a/\x20\x7c\x20awk\x20\x27\x7bprint\x20\x249\x7d\x27\x20\x7c\x20sed\x20\x22s\x7c/\x7c\x7c\x22\x20\x3e\x20\x7e/creamy_seas/sync_files/yandex_disk/all_folders\x2etxt
 SETUVAR _fish_abbr_yt:youtube\x2ddl\x20\x2df\x20135\x2b140\x20\x2do\x20\x22\x25\x28title\x29s\x2e\x25\x28ext\x29s\x22
 SETUVAR _fish_abbr_yt134:youtube\x2ddl\x20\x2df\x20134\x2b140\x20\x2do\x20\x22\x25\x28title\x29s\x2e\x25\x28ext\x29s\x22
+SETUVAR _fish_abbr_yta:youtube\x2ddl\x20\x2df\x20bestaudio\x20\x2d\x2dembed\x2dthumbnail\x20\x2d\x2dadd\x2dmetadata\x20\x2dx\x20\x2d\x2daudio\x2dformat\x20m4a
 SETUVAR _fish_abbr_ytmusic:youtube\x2ddl\x20\x2d\x2dembed\x2dthumbnail\x20\x2df\x20bestaudio\x20\x2d\x2dextract\x2daudio\x20\x2d\x2daudio\x2dformat\x20mp3\x20\x2do\x20\x20\x20\x20\x20\x22\x25\x28title\x29s\x2e\x25\x28ext\x29s\x22
+SETUVAR _fish_abbr_ytv:youtube\x2ddl\x20\x2df\x20136\x2b140
 SETUVAR fish_color_autosuggestion:FFC473
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:FF9400
@@ -41,6 +45,7 @@ SETUVAR fish_color_error:FFDD73
 SETUVAR fish_color_escape:00a6b2
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_match:\x2d\x2dbackground\x3dbrblue
 SETUVAR fish_color_normal:normal
 SETUVAR fish_color_operator:00a6b2

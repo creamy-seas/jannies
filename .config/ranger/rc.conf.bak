@@ -42,7 +42,7 @@ set automatically_count_files true
 set show_hidden_bookmarks true
 
 # default, jungle, snow, solarized
-set colorscheme default
+set colorscheme solarized
 
 # And collapse (shrink) the last column if there is nothing to preview?
 set preview_files true
@@ -68,7 +68,7 @@ set display_tags_in_all_columns true
 # Version control
 ########################################
 # Be aware of version control systems and display information.
-set vcs_aware false 
+set vcs_aware false
 # State of the four backends git, hg, bzr, svn. The possible states are
 # disabled, local (only show local info), enabled (show local and remote
 # information).
@@ -80,7 +80,7 @@ set vcs_backend_svn disabled
 ########################################
 # Preview images
 ########################################
-set preview_images true
+set preview_images false
 #   Preview images in full color with the external command "w3mimgpreview"?
 #   This requires the console web browser "w3m" and a supported terminal.
 #   It has been successfully tested with "xterm" and "urxvt" without tmux.
@@ -109,7 +109,7 @@ set max_history_size 100
 set max_console_history_size 100
 
 # Avoid previewing files larger than this size, in bytes.  Use a value of 0 to
-# disable this feature. 
+# disable this feature.
 set preview_max_size 100000
 
 # Try to keep so much space between the top/bottom border when scrolling:
@@ -237,7 +237,7 @@ map !  console shell%space
 map @  console -p6 shell  %s
 map #  console shell -p%space
 #map s  console shell%space
-map r  chain draw_possible_programs; console open_with%%space
+map r  chain draw_possible_programs; console open_with%space
 map f  console find%space
 map cd console cd%space
 
@@ -251,16 +251,22 @@ map Mt linemode metatitle
 # My directoires
 ########################################
 #gnuclownworld
+map gbdm cd $NEW_DIR
+map gdbp cd /Users/CCCP/creamy_seas/db_photo
+map gdbm cd /Users/CCCP/creamy_seas/db_music
+map gya cd /Volumes/GoogleDrive/My Drive/adv18_sa36_automation
+map gua cd /Volumes/GoogleDrive/Shared drives/SA36-automation
+map gyv cd /Volumes/GoogleDrive/My Drive/video_log
 map gyx cd $NEW_DIR
 map guh cd /Volumes/GoogleDrive/Shared drives/Horse-racing
-map gus cd "/Volumes/GoogleDrive/Shared drives/SA36-automation"
-map gzm cd /Users/CCCP/creamy_seas/music_db/music_videos
+map gus cd /Volumes/GoogleDrive/Shared drives/Sinobestech
+map gzm cd /Users/CCCP/creamy_seas/db_music/music_videos
 map gqm cd /Users/CCCP/creamy_seas/music_db
 map gyo cd /Users/CCCP/gdrive/organizing
-map gyb cd "/Volumes/GoogleDrive/My Drive/bureucracy"
+map gyb cd /Volumes/GoogleDrive/My Drive/bureucracy
 map gyf cd /Users/CCCP/gdrive/adv16_sa_onFire
 map gyt cd /Users/CCCP/creamy_seas/2am/adv15_training
-map gys cd /Volumes/GoogleDrive/My Drive/adv18_sa36_automation
+map gys cd /Volumes/GoogleDrive/My Drive/adv19_sinobestech
 map gyh cd /Volumes/GoogleDrive/My Drive/adv17_ext_horseBetting
 map gD cd /Users/CCCP/creamy_seas/2am/google_drive/days_work
 map gn cd /Users/CCCP/creamy_seas/2am/documentation/natural_language
@@ -268,9 +274,8 @@ map gl cd /Users/CCCP/creamy_seas/learn_to_kode
 map gq cd /Users/CCCP/creamy_seas/blackpill/bayesian_networks
 map gf cd /Users/CCCP/creamy_seas/monday_starts_on_saturday/fabrication/autocad_files
 map gx cd /Users/CCCP/creamy_seas/monday_starts_on_saturday/xmon
-map ga cd ~/creamy_seas/monday_starts_on_saturday/all_the_notes
 map gdr cd ~/creamy_seas/monday_starts_on_saturday/dipole/report
-map gdp cd ~/creamy_seas/monday_starts_on_saturday/dipole/python
+map gdp cd /Users/CCCP/creamy_seas/monday_starts_on_saturday/dipole/paper
 map gpm cd ~/creamy_seas/monday_starts_on_saturday/generic_matlab
 map gpp cd ~/creamy_seas/monday_starts_on_saturday/generic_python
 map gj cd ~/creamy_seas/jailbait
@@ -306,7 +311,8 @@ map M0 shell magick %f -scale 1000 %f
 map Mc shell magick %f -fuzz 5%% -transparent white %f
 
 # python
-map <C-f> fzf_select
+map <C-s> fzf_select
+map <C-c> shell search_config_files.sh
 map <C-e> extracthere
 map pi paste_ilya
 map yi shell clipboard.oa $(pwd)/%f
@@ -326,8 +332,7 @@ copymap m<bg>  um<bg> `<bg> '<bg>
 map mkd console mkdir%space
 map O shell open .
 map cW bulkrename %s
-map <C-c> fzf_select
-map <C-s> fzf_locate
+map <C-l> fzf_locate
 map <C-x> compress
 map ee shell inkscape_export.sh %f
 map br shell /Users/CCCP/.local/bin/ranger/bind_folder_ranger.sh%space

@@ -1,13 +1,12 @@
-#  ____  _____  _   _  _____  ____      _     _     
-# / ___|| ____|| \ | || ____||  _ \    / \   | |    
-#| |  _ |  _|  |  \| ||  _|  | |_) |  / _ \  | |    
-#| |_| || |___ | |\  || |___ |  _ <  / ___ \ | |___ 
+#  ____  _____  _   _  _____  ____      _     _
+# / ___|| ____|| \ | || ____||  _ \    / \   | |
+#| |  _ |  _|  |  \| ||  _|  | |_) |  / _ \  | |
+#| |_| || |___ | |\  || |___ |  _ <  / ___ \ | |___
 # \____||_____||_| \_||_____||_| \_\/_/   \_\|_____|
-#                                                   
+#
 
 [general]
 accounts = ilya_DREAMSAI, ilya_NTLWORLD, ilya_OUTLOOK, ilya_GMAIL
-# accounts = ilya_GMAIL, ilya_DREAMSAI
 
 # user interface for terminal
 ui = TTYUI
@@ -21,12 +20,12 @@ postsynchook = mu index --maildir ~/mail
 autorefresh = 5
 quick = 10
 
-# ____   ____   _____     _     __  __  ____            _     ___ 
+# ____   ____   _____     _     __  __  ____            _     ___
 #|  _ \ |  _ \ | ____|   / \   |  \/  |/ ___|          / \   |_ _|
-#| | | || |_) ||  _|    / _ \  | |\/| |\___ \  _____  / _ \   | | 
-#| |_| ||  _ < | |___  / ___ \ | |  | | ___) ||_____|/ ___ \  | | 
+#| | | || |_) ||  _|    / _ \  | |\/| |\___ \  _____  / _ \   | |
+#| |_| ||  _ < | |___  / ___ \ | |  | | ___) ||_____|/ ___ \  | |
 #|____/ |_| \_\|_____|/_/   \_\|_|  |_||____/       /_/   \_\|___|
-#                                                                 
+#
 #
 
 [Account ilya_DREAMSAI]
@@ -35,21 +34,20 @@ remoterepository = ilya_DREAMSAI-remote
 
 [Repository ilya_DREAMSAI-local]
 type  = GmailMaildir
-localfolders = ~/mail/ilya_DREAMSAI
+localfolders = ~/db_mail/ilya_DREAMSAI
 
 [Repository ilya_DREAMSAI-remote]
 type = Gmail
 remotehost = imap.gmail.com
 remoteuser = ilya.antonov@dreams-ai.com
-# remotepasseval = get_pswd("~/mail/.pswd_gmail.gpg")
 remotepasseval = get_password_emacs("ilya.antonov@dreams-ai.com")
 realdelete = yes
 
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 auth_mechanisms = LOGIN
 
-# _   _  _____  _  __        __ ___   ____   _      ____  
-#| \ | ||_   _|| | \ \      / // _ \ |  _ \ | |    |  _ \ 
+# _   _  _____  _  __        __ ___   ____   _      ____
+#| \ | ||_   _|| | \ \      / // _ \ |  _ \ | |    |  _ \
 #|  \| |  | |  | |  \ \ /\ / /| | | || |_) || |    | | | |
 #| |\  |  | |  | |___\ V  V / | |_| ||  _ < | |___ | |_| |
 #|_| \_|  |_|  |_____|\_/\_/   \___/ |_| \_\|_____||____/
@@ -60,14 +58,13 @@ remoterepository = ilya_NTLWORLD-remote
 
 [Repository ilya_NTLWORLD-local]
 type = Maildir
-localfolders = ~/mail/ilya_NTLWORLD
+localfolders = ~/db_mail/ilya_NTLWORLD
 
 [Repository ilya_NTLWORLD-remote]
 type = IMAP
 remoteport = 993
 remotehost = imap.virginmedia.com
 remoteuser = ilya.antonov24@ntlworld.com
-# remotepasseval = get_pswd("~/mail/.pswd_ntlworld.gpg")
 remotepasseval = get_password_emacs("ilya.antonov24@ntlworld.com")
 realdelete = no
 
@@ -76,10 +73,10 @@ cert_fingerprint = 66:EE:B0:DD:C8:18:16:D3:7D:93:F3:59:B6:A8:D6:DE:39:93:00:41
 
 folderfilter = lambda foldername: foldername  in ['INBOX', 'Drafts', 'Archive', 'Sent', 'Trash']
 
-#  ____  __  __     _     ___  _     
-# / ___||  \/  |   / \   |_ _|| |    
-#| |  _ | |\/| |  / _ \   | | | |    
-#| |_| || |  | | / ___ \  | | | |___ 
+#  ____  __  __     _     ___  _
+# / ___||  \/  |   / \   |_ _|| |
+#| |  _ | |\/| |  / _ \   | | | |
+#| |_| || |  | | / ___ \  | | | |___
 # \____||_|  |_|/_/   \_\|___||_____|
 
 [Account ilya_GMAIL]
@@ -88,13 +85,13 @@ remoterepository = ilya_GMAIL-remote
 
 [Repository ilya_GMAIL-local]
 type  = GmailMaildir
-localfolders = ~/mail/ilya_GMAIL
+localfolders = ~/db_mail/ilya_GMAIL
 
 [Repository ilya_GMAIL-remote]
 type = Gmail
 remotehost = imap.gmail.com
 remoteuser = antonov.ilya225@gmail.com
-# remotepasseval = get_pswd("~/mail/.pswd_gmail.gpg")
+# remotepasseval = get_pswd("~/db_mail/.pswd_gmail.gpg")
 remotepasseval = get_password_emacs("antonov.ilya225@gmail.com")
 realdelete = yes
 
@@ -103,8 +100,8 @@ auth_mechanisms = LOGIN
 
 #  ___   _   _  _____  _      ___    ___   _  __
 # / _ \ | | | ||_   _|| |    / _ \  / _ \ | |/ /
-#| | | || | | |  | |  | |   | | | || | | || ' / 
-#| |_| || |_| |  | |  | |___| |_| || |_| || . \ 
+#| | | || | | |  | |  | |   | | | || | | || ' /
+#| |_| || |_| |  | |  | |___| |_| || |_| || . \
 # \___/  \___/   |_|  |_____|\___/  \___/ |_|\_\
 
 
@@ -114,17 +111,15 @@ remoterepository = ilya_OUTLOOK-remote
 
 [Repository ilya_OUTLOOK-local]
 type = Maildir
-localfolders = ~/mail/ilya_OUTLOOK
+localfolders = ~/db_mail/ilya_OUTLOOK
 
 [Repository ilya_OUTLOOK-remote]
 type = IMAP
 remotehost = outlook.office365.com
 remoteuser = zyva263@live.rhul.ac.uk
-# remotepasseval = get_pswd("~/mail/.pswd_outlook.gpg")
 remotepasseval = get_password_emacs("zyva263@live.rhul.ac.uk")
 realdelete = no
 
 sslcacertfile = /usr/local/etc/openssl/cert.pem
 
 folderfilter = lambda folder: folder in ['INBOX', 'Drafts', 'Archive', 'Sent Items', 'Deleted Items']
-

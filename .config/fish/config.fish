@@ -11,6 +11,7 @@ eval (python3 -m virtualfish)
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 set VIRTUALFISH_HOME /Users/CCCP/.config/python_vi
 
+abbr jq "jq . /tmp/log"
 abbr ranger "ranger --choosedir=$HOME/.rangerdir; cd (cat $HOME/.rangerdir)"
 
 #                      _           _
@@ -58,7 +59,6 @@ abbr ws "wget --recursive --page-requisites --html-extension --convert-links --s
 #
 abbr yg "cd ~/creamy_seas && ls -dl */ | awk '{print \$9}' | sed \"s|/||\" > ~/creamy_seas/sync_files/yandex_disk/all_folders.txt"
 
-
 #                    _    __                      _    _
 #  ___  ___    ___  | |  / _| _   _  _ __    ___ | |_ (_)  ___   _ __   ___
 # / __|/ _ \  / _ \ | | | |_ | | | || '_ \  / __|| __|| | / _ \ | '_ \ / __|
@@ -80,6 +80,8 @@ abbr rm_bg "remove_background.sh"
 abbr go "gource_record.sh"
 abbr xc "xcowsay"
 abbr sl "sl | lolcat"
+abbr yta youtube-dl -f bestaudio --embed-thumbnail --add-metadata -x --audio-format m4a
+abbr ytv youtube-dl -f 136+140
 # _      ___  _   _  _   _ __  __
 #| |    |_ _|| \ | || | | |\ \/ /
 #| |     | | |  \| || | | | \  /
@@ -91,4 +93,4 @@ abbr sl "sl | lolcat"
 # abbr pc "sudo pacman -S"
 # abbr emacs "exec emacs"
 
-set -g fish_user_paths "/usr/local/opt/mysql-client/bin" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/mysql-client/bin" $fish_user_paths

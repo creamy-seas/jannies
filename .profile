@@ -16,6 +16,7 @@
 export LUKE_FOLDER="/Users/CCCP/creamy_seas/boomer/linux"
 export CRON_FOLDER="/Users/CCCP/.local/bin/cron"
 export HH=d21cyk
+export WORKON_HOME="/Users/CCCP/.config/python_vi/"
 
 
 #  ____   ____    ___   _____  ___  _      _____
@@ -30,24 +31,22 @@ export HH=d21cyk
 # 1 - variables to set on login
 export EDITOR="emacsclient -t"	# opening emacs in terminal
 export VISUAL="emacsclient" # open emacs in gui
-export BROWSER="firefox"
 
 # export TERMINAL="st"
 export WORKON_HOME=$HOME/.config/python_vi
-#source /usr/bin/virtualenvwrapper.sh
 export SHELL=/usr/local/bin/fish
 export HOME=/Users/CCCP
 export VIRTUALFISH_HOME=$HOME/.config/python_vi
-export PATH="$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":"):$PATH"
+export PATH="$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":"):/usr/local/bin:~/.cargo/bin:$PATH"
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-export PATH="$HOME/.cargo/bin:$PATH"
+source ~/.cargo/env
 
 #  ____   _                _
 # / ___| | |_  __ _  _ __ | |_  _   _  _ __
 # \___ \ | __|/ _` || '__|| __|| | | || '_ \
-#  ___) || |_| (_| || |   | |_ | |_| || |_) |
+    #  ___) || |_| (_| || |   | |_ | |_| || |_) |
 # |____/  \__|\__,_||_|    \__| \__,_|| .__/
 #                                     |_|
 #
@@ -61,7 +60,7 @@ function resolve_transmission_daemon {
 	#killall transmission-daemon
 	#echo "Killed transmission-daemon"
 	echo "> \"transmission-daemon\" already up"
-fi
+    fi
 }
 
 function resolve_cron {

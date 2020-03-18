@@ -16,3 +16,4 @@ do
     echo File $fn does not exist or is not readable.
   fi
 done
+

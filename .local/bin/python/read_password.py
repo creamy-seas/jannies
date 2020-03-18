@@ -5,25 +5,35 @@ import argparse
 import re
 
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+def print_colored(text, colour=bcolors.OKGREEN):
+    print(colour + text + bcolors.ENDC)
+
+
 def get_password_emacs(user, verbose=True):
 
-    # 1 - prepare regexp
+    # 1 - prepare regexp ######################################################
     s = "%s password ([^ ]*)\n" % (user)
     p = re.compile(s)
-    if(verbose):
-        print(s)
-        print("==> Prompting for password")
 
-    # 2 - kill pinentry programs which tend to stall on the mac
+    # 2 - kill pinentry programs which tend to stall on the mac ###########
     os.system("killall pinentry 2> /dev/null")
 
-    # 3 - get password
+    # 3 - get password ########################################################
     authinfo = os.popen(
-        "gpg -q --no-tty -d ~/mail/.pswd_mail.gpg").read()
+        "gpg -q --no-tty -d ~/db_mail/.pswd_mail.gpg").read()
 
-    # 4 - return
-    if(verbose):
-        print("==> Returning password")
+    # 4 - return ##############################################################
     return p.search(authinfo).group(1)
 
 
@@ -35,7 +45,6 @@ if (__name__ == '__main__'):
     ap = argparse.ArgumentParser()
     ap.add_argument("-u", "--user", required=True,
                     help="user")
-
     args = vars(ap.parse_args())
 
     print(get_password_emacs(args['user'], verbose=False))
