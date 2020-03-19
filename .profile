@@ -37,7 +37,9 @@ export WORKON_HOME=$HOME/.config/python_vi
 export SHELL=/usr/local/bin/fish
 export HOME=/Users/CCCP
 export VIRTUALFISH_HOME=$HOME/.config/python_vi
-export PATH="$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":"):/usr/local/bin:~/.cargo/bin:$PATH"
+# TODO: I will not add the /usr/local/bin. Do it in fish
+export PATH="$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":"):~/.cargo/bin:$PATH"
+
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
@@ -55,11 +57,11 @@ function resolve_transmission_daemon {
 
     if [[ -z $exists ]]; then
 	transmission-daemon
-	echo "> Starting \"transmission-daemon\""
+	echo "✈ Starting \"transmission-daemon\""
     else
 	#killall transmission-daemon
 	#echo "Killed transmission-daemon"
-	echo "> \"transmission-daemon\" already up"
+	echo "✈ \"transmission-daemon\" already up"
     fi
 }
 
@@ -70,7 +72,7 @@ function resolve_cron {
     crontab $CRON_FOLDER/ilya_cron
 
 
-    echo "> Starting cron"
+    echo "⏲  Starting cron"
     echo $HH | sudo -S cron 2> /dev/null
 }
 

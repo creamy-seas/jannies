@@ -7,6 +7,7 @@ bass source ~/.profile
 #|_|  |_|/_/   \_\\____| |____/ |_____|  |_|    |_|  |___||_| \_| \____|
 #
 #
+set PATH /usr/local/bin $PATH
 eval (python3 -m virtualfish)
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 set VIRTUALFISH_HOME /Users/CCCP/.config/python_vi

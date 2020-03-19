@@ -40,3 +40,6 @@
 !.Xmodmap
 !.xinitrc
 !.Xdefaults
+/.iterm2/it2api
+/.iterm2/it2git
+/.local/bin/python/__pycache__/
