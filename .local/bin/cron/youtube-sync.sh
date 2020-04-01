@@ -12,7 +12,7 @@ cd "$DIRECTORY"
 
 # Run youtube and note the difference in the files in the directory
 ls -a | sort > $TEMP_FILE"1"
-youtube-dl -i --playlist-end 20 -f 134+140 "$YOUTUBE_DL_LINK"
+youtube-dl -i --playlist-end 20 -f 136+140 "$YOUTUBE_DL_LINK"
 ls -a | sort > $TEMP_FILE"2"
 
 # Check for differences

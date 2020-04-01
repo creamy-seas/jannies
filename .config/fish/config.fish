@@ -83,6 +83,8 @@ abbr xc "xcowsay"
 abbr sl "sl | lolcat"
 abbr yta youtube-dl -f bestaudio --embed-thumbnail --add-metadata -x --audio-format m4a
 abbr ytv youtube-dl -f 136+140
+
+abbr rm trash.sh
 # _      ___  _   _  _   _ __  __
 #| |    |_ _|| \ | || | | |\ \/ /
 #| |     | | |  \| || | | | \  /

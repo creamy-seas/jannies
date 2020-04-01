@@ -16,7 +16,6 @@
 export LUKE_FOLDER="/Users/CCCP/creamy_seas/boomer/linux"
 export CRON_FOLDER="/Users/CCCP/.local/bin/cron"
 export HH=d21cyk
-export WORKON_HOME="/Users/CCCP/.config/python_vi/"
 
 
 #  ____   ____    ___   _____  ___  _      _____
@@ -29,7 +28,7 @@ export WORKON_HOME="/Users/CCCP/.config/python_vi/"
 # export GPG_TTY
 
 # 1 - variables to set on login
-export EDITOR="emacsclient -t"	# opening emacs in terminal
+export EDITOR="emacsclient -t &"	# opening emacs in terminal
 export VISUAL="emacsclient" # open emacs in gui
 
 # export TERMINAL="st"

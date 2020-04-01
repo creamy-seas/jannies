@@ -16,6 +16,7 @@ SETUVAR _fish_abbr_mush:stream_concat\x2esh
 SETUVAR _fish_abbr_mw:move_window\x2esh
 SETUVAR _fish_abbr_netstat:sudo\x20lsof\x20\x2di\x20\x7c\x20grep\x20LISTEN
 SETUVAR _fish_abbr_ranger:ranger\x20\x2d\x2dchoosedir\x3d/Users/CCCP/\x2erangerdir\x3b\x20cd\x20\x28cat\x20/Users/CCCP/\x2erangerdir\x29
+SETUVAR _fish_abbr_rm:trash\x2esh
 SETUVAR _fish_abbr_rm__bg:remove_background\x2esh
 SETUVAR _fish_abbr_se:search_config_files\x2esh
 SETUVAR _fish_abbr_sl:sl\x20\x7c\x20lolcat
