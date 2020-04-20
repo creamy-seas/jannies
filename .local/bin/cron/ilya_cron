@@ -1,2 +1,5 @@
 38 * * * * source $HOME/.cronfile && $CRON_FOLDER/youtube-sync.sh "https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA" "Boomer" "/Users/CCCP/creamy_seas/boomer/linux" >> /Users/CCCP/cron_log
 51 * * * * source $HOME/.cronfile && $CRON_FOLDER/youtube-sync.sh "https://www.youtube.com/user/TheLatsbrah" "Golden One" "/Users/CCCP/creamy_seas/boomer/golden-one" >> /Users/CCCP/cron_log
+51 * * * * source $HOME/.cronfile && $CRON_FOLDER/youtube-sync.sh "https://www.youtube.com/user/mzamansky/videos" "Zamansky" "/Users/CCCP/creamy_seas/boomer/emacs" >> /Users/CCCP/cron_log
+
+
