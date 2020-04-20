@@ -25,6 +25,7 @@
 !.local/bin
 !.iterm2/
 !.ncmpcpp
+!.oh-my-zsh
 
 # files
 \#*
@@ -43,3 +44,4 @@
 /.iterm2/it2api
 /.iterm2/it2git
 /.local/bin/python/__pycache__/
+!.zshrc

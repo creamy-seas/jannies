@@ -8,7 +8,18 @@ export ZSH="/Users/CCCP/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="random"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    #ip ram battery
+    dir_writable dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv
+				    status
+				    command_execution_time
+				    root_indicator
+				    background_jobs)
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +79,19 @@ ZSH_THEME="random"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git shrink-path emacs docker
+	 brew
+	 docker-compose
+	 battery
+	 zsh-autosuggestions
+	 k
+	 zsh-syntax-highlighting)
+#zsh-syntax-highlighting must be last
+
+setopt prompt_subst
+PS1='%n@%m $(shrink_path -f)>'
+RPROMPT='$(battery_pct_prompt)'
+
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
@@ -96,16 +119,30 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# colorize man pages
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+export LESSHISTFILE=-
 
 export CRON_FOLDER="/Users/CCCP/.local/bin/cron"
 export EDITOR="emacsclient -t &"	# opening emacs in terminal
 export VISUAL="emacsclient"		# open emacs in gui
 
-export WORKON_HOME=$HOME/.config/python_vi
 export HOME=/Users/CCCP
 export PATH="$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":")/usr/local/bin:~/.cargo/bin:$PATH"
 
+export WORKON_HOME=$HOME/.config/python_vi
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 
+
+source /usr/local/bin/virtualenvwrapper.sh
 source ~/.cargo/env
 
 
@@ -135,3 +172,13 @@ function resolve_transmission_daemon {
 
 resolve_transmission_daemon
 resolve_cron
+
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias se="search_config_files.sh"
+alias gbib="get_bibliography.sh"
+alias br="bind_folder_ranger.sh"
+alias rm_bg="remove_background.sh"
+alias go="gource_record.sh"
+
+# must be here!
+source $ZSH/oh-my-zsh.sh
