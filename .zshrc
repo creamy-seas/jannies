@@ -175,10 +175,12 @@ resolve_cron
 
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias se="search_config_files.sh"
+alias пше="pshe"
 alias gbib="get_bibliography.sh"
 alias br="bind_folder_ranger.sh"
-alias rm_bg="remove_background.sh"
+alias rbg="remove_background.sh"
 alias go="gource_record.sh"
+alias zp="zsh_plugin.sh"
 
 # must be here!
 source $ZSH/oh-my-zsh.sh
