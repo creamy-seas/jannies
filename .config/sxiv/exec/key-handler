@@ -3,13 +3,11 @@ while read file
 do
         case "$1" in
 	"C-d") rm -rf "$file" ;;
-	"1") mv "$file" "$(pwd)/1";;
-	"2") mv "$file" "$(pwd)/2";;
-	"3") mv "$file" "$(pwd)/3";;
-	"4") mv "$file" "$(pwd)/4";;
-	"5") mv "$file" "$(pwd)/5";;
-	"n") mv "$file" /Users/CCCP/creamy_seas/photo_db_temp/Winter\ 2018-2019;;
-	"k") mv "$file" /Users/CCCP/creamy_seas/photo_db_temp/kong;;
+	"1") mkdir -p 1 && mv "$file" "$(pwd)/1";;
+	"2") mkdir -p 2 && mv "$file" "$(pwd)/2";;
+	"3") mkdir -p 3 && mv "$file" "$(pwd)/3";;
+	"4") mkdir -p 4 && mv "$file" "$(pwd)/4";;
+	"5") mkdir -p 5 && mv "$file" "$(pwd)/5";;
         "C-b")
              cp "$file" ~/Dropbox ;;
         "C-r")

@@ -24,12 +24,10 @@ export HH=d21cyk
 # |  __/ |  _ < | |_| ||  _|   | | | |___ | |___
 # |_|    |_| \_\ \___/ |_|    |___||_____||_____|
 #
-# GPG_TTY=$(tty)
-# export GPG_TTY
 
 # 1 - variables to set on login
 export EDITOR="emacsclient -t &"	# opening emacs in terminal
-export VISUAL="emacsclient" # open emacs in gui
+export VISUAL="emacsclient"		# open emacs in gui
 
 # export TERMINAL="st"
 export WORKON_HOME=$HOME/.config/python_vi

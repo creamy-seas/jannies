@@ -1,0 +1,3 @@
+[submodule "Desktop/devel/d_vector_speaker_verification"]
+	path = Desktop/devel/d_vector_speaker_verification
+	url = https://gitlab.com/speaker_verification/d_vector_speaker_verification

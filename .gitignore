@@ -45,3 +45,4 @@
 /.iterm2/it2git
 /.local/bin/python/__pycache__/
 !.zshrc
+/.oh-my-zsh/

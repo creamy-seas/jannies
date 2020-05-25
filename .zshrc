@@ -1,3 +1,5 @@
+# Need to manually install autojump!
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -79,7 +81,11 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git shrink-path emacs docker
+plugins=(git
+	 shrink-path
+	 emacs
+	 docker
+	 autojump
 	 brew
 	 docker-compose
 	 battery
@@ -87,6 +93,8 @@ plugins=(git shrink-path emacs docker
 	 k
 	 zsh-syntax-highlighting)
 #zsh-syntax-highlighting must be last
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 setopt prompt_subst
 PS1='%n@%m $(shrink_path -f)>'
@@ -134,7 +142,7 @@ export EDITOR="emacsclient -t &"	# opening emacs in terminal
 export VISUAL="emacsclient"		# open emacs in gui
 
 export HOME=/Users/CCCP
-export PATH="$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":")/usr/local/bin:~/.cargo/bin:$PATH"
+export PATH="$(du $HOME/.local/bin | awk '{print $2}' | tr "\n" ":")/usr/local/bin:~/.cargo/bin:/Library/TeX/texbin:$PATH"
 
 export WORKON_HOME=$HOME/.config/python_vi
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
