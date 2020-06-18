@@ -340,8 +340,8 @@
        selcue="1"
        align_mode="0">
       <group
-         id="lineheight"
-         display_unit="2" />
+         display_unit="2"
+         id="lineheight" />
     </eventcontext>
     <eventcontext
        id="nodes"
@@ -430,12 +430,12 @@
        offset="0"
        offsetunits="pt" />
     <group
-       id="measure"
-       fontsize="10"
-       precision="2"
-       scale="100"
+       unit="mm"
        offset="5"
-       unit="mm" />
+       scale="100"
+       precision="2"
+       fontsize="10"
+       id="measure" />
   </group>
   <group
      id="palette">
@@ -596,8 +596,8 @@
        panel_border="0"
        x="0"
        y="0"
-       w="338"
-       h="485"
+       w="1"
+       h="1"
        visible="1"
        state="3"
        placement="1" />
@@ -640,8 +640,8 @@
        panel_border="0"
        x="0"
        y="0"
-       w="338"
-       h="485"
+       w="1"
+       h="1"
        visible="1"
        state="3"
        placement="1" />
@@ -710,8 +710,8 @@
        panel_border="0"
        x="0"
        y="0"
-       w="338"
-       h="485"
+       w="1"
+       h="1"
        visible="1"
        state="3"
        placement="1">
@@ -806,8 +806,8 @@
        panel_border="0"
        x="0"
        y="0"
-       w="338"
-       h="485"
+       w="1"
+       h="1"
        visible="1"
        state="3"
        placement="1" />
@@ -841,36 +841,36 @@
        on-blur="0.50"
        animate-time="100" />
     <group
-       id="glyphs"
-       panel_size="1"
-       panel_ratio="100"
-       panel_mode="1"
-       panel_wrap="0"
-       panel_border="0"
-       x="0"
-       y="0"
-       w="361"
-       h="311"
+       placement="1"
+       state="2"
        visible="0"
-       state="2"
-       placement="1" />
-    <group
-       placement="5"
-       state="2"
-       visible="1"
-       h="263"
-       w="336"
+       h="311"
+       w="361"
        y="0"
        x="0"
        panel_border="0"
        panel_wrap="0"
        panel_mode="1"
-       panel_size="1"
        panel_ratio="100"
-       id="objectattr">
+       panel_size="1"
+       id="glyphs" />
+    <group
+       id="objectattr"
+       panel_ratio="100"
+       panel_size="1"
+       panel_mode="1"
+       panel_wrap="0"
+       panel_border="0"
+       x="0"
+       y="0"
+       w="336"
+       h="263"
+       visible="1"
+       state="2"
+       placement="5">
       <group
-         panel_size="0"
-         id="" />
+         id=""
+         panel_size="0" />
     </group>
   </group>
   <group
@@ -1198,7 +1198,7 @@
        y="1183"
        fullscreen="0"
        id="geometry"
-       maximized="0" />
+       maximized="1" />
     <group
        id="XYfront" />
     <group
