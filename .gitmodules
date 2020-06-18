@@ -1,3 +1,6 @@
 [submodule "Desktop/devel/d_vector_speaker_verification"]
 	path = Desktop/devel/d_vector_speaker_verification
 	url = https://gitlab.com/speaker_verification/d_vector_speaker_verification
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git

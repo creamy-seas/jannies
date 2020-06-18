@@ -25,12 +25,11 @@
 !.local/bin
 !.iterm2/
 !.ncmpcpp
-!.oh-my-zsh
-!.oh-my-zsh/
 !.mpd/
 
 # files
 \#*
+!.zshrc
 !.gitignore
 !.profile
 !.bashrc
@@ -47,4 +46,3 @@
 /.iterm2/it2git
 /.local/bin/python/__pycache__/
 !/.zshrc
-/.oh-my-zsh/

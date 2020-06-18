@@ -18,10 +18,10 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     #ip ram battery
     dir_writable dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv
-				    status
-				    command_execution_time
-				    root_indicator
-				    background_jobs)
+            status
+            command_execution_time
+            root_indicator
+            background_jobs)
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -82,16 +82,16 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-	 shrink-path
-	 emacs
-	 docker
-	 autojump
-	 brew
-	 docker-compose
-	 battery
-	 zsh-autosuggestions
-	 k
-	 zsh-syntax-highlighting)
+   shrink-path
+   emacs
+   docker
+   autojump
+   brew
+   docker-compose
+   battery
+   zsh-autosuggestions
+   k
+   zsh-syntax-highlighting)
 #zsh-syntax-highlighting must be last
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
@@ -169,12 +169,12 @@ function resolve_transmission_daemon {
     exists=$(ps aux | grep '[0-9]\{2\} transmission-daemon')
 
     if [[ -z $exists ]]; then
-	transmission-daemon
-	echo "✈ Starting \"transmission-daemon\""
+  transmission-daemon
+  echo "✈ Starting \"transmission-daemon\""
     else
-	#killall transmission-daemon
-	#echo "Killed transmission-daemon"
-	echo "✈ \"transmission-daemon\" already up"
+  #killall transmission-daemon
+  #echo "Killed transmission-daemon"
+  echo "✈ \"transmission-daemon\" already up"
     fi
 }
 
