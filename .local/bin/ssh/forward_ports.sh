@@ -19,7 +19,7 @@ REMOTE_ALIVE_MAX_COUNT=9999999
 ###############################################################################
 
 echo "+----------------------------------+                     +----------------------------------+                  +----------------------------------+"
-echo "|           Local Machine          |                     |           Jumpbox Raspeberry Pi  |                  |           Remote Machine         |"
+echo "|         🦑 Local Machine         |                     |           Jumpbox Raspeberry Pi  |                  |          🦅 Remote Machine       |"
 echo "+-------------------------------+--+--+               +--+--+----------------------------+--+--+            +--+--+-------------------------------+"
 echo "|                               |     |               |     |                            |     |            |     |                               |"
 echo "|                               |$LOCAL_PORT----------------->  $PI_PORT ...............................$PI_FORWARDED_PORT ---------------->$REMOTE_PORT"
@@ -52,7 +52,7 @@ if [ $SELECTION == 1 ]; then
 elif [ $SELECTION == 2 ]; then
     echo "🦅 Running the following manually remote machine"
     echo ssh -f -N \
-         -o "ServerAliveInterval $REMOTE_ALIVE_INTERVAL" -o "ServerAliveCountMax $REMOTE_ALIVE_MAX_COUNT" \
+         -o \"ServerAliveInterval $REMOTE_ALIVE_INTERVAL\" -o \"ServerAliveCountMax $REMOTE_ALIVE_MAX_COUNT\" \
          -R $PI_FORWARDED_PORT:localhost:$REMOTE_PORT \
          $PI_USERNAME@$PI_ADDRESS -p $PI_PORT
 fi

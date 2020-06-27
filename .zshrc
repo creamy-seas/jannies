@@ -148,7 +148,8 @@ export WORKON_HOME=$HOME/.config/python_vi
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-
+NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 source /usr/local/bin/virtualenvwrapper.sh
 source ~/.cargo/env

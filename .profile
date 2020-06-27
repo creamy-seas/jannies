@@ -75,3 +75,6 @@ function resolve_cron {
 
 resolve_transmission_daemon
 resolve_cron
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
